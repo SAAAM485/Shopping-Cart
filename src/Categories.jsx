@@ -1,31 +1,46 @@
-import { useState } from "react";
-import { Outlet, useNavigate, useOutletContext } from "react-router-dom";
+import {
+    useParams,
+    useOutletContext,
+    useNavigate,
+    Outlet,
+} from "react-router-dom";
 import Card from "./Card";
+import { useState, useEffect } from "react";
 import { BackToProducts } from "./Buttons";
 
-const Products = () => {
-    const [showDetail, setShowDetail] = useState(false);
+const Categories = () => {
+    const { category } = useParams();
     const { products } = useOutletContext();
     const navigate = useNavigate();
+    const [showDetail, setShowDetail] = useState(false);
+    const filteredProducts = products.filter(
+        (product) => product.category === category
+    );
 
     const handleProductClick = (product) => {
-        navigate(`/products/${product.id}`, { state: { product } });
+        navigate(`/categories/${category}/${product.id}`, {
+            state: { product, from: category },
+        });
         setShowDetail(true);
     };
 
     const handleBackClick = () => {
-        navigate("/products");
+        navigate(-1);
         setShowDetail(false);
     };
+
+    useEffect(() => {
+        setShowDetail(false);
+    }, [category]);
 
     if (products.length === 0) return <p>Loading...</p>;
 
     return (
         <div>
-            <h2>Products</h2>
+            <h1>{category}</h1>
             {!showDetail ? (
                 <div>
-                    {products.map((product) => (
+                    {filteredProducts.map((product) => (
                         <Card
                             key={product.id}
                             product={product}
@@ -43,4 +58,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Categories;

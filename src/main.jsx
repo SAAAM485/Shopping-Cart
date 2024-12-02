@@ -7,6 +7,7 @@ import ErrorPage from "./ErrorPage.jsx";
 import Home from "./Home.jsx";
 import Products from "./Products.jsx";
 import ProductDetail from "./ProductDetail.jsx";
+import Categories from "./Categories.jsx";
 import Cart from "./Cart.jsx";
 
 const router = createBrowserRouter([
@@ -26,6 +27,16 @@ const router = createBrowserRouter([
             {
                 path: "products",
                 element: <Products />,
+                children: [
+                    {
+                        path: ":productId",
+                        element: <ProductDetail />,
+                    },
+                ],
+            },
+            {
+                path: "categories/:category",
+                element: <Categories />,
                 children: [
                     {
                         path: ":productId",

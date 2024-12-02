@@ -7,7 +7,7 @@ const Card = ({ product, onClick }) => {
             <img src={product.image} alt={product.title} />
             <p>{product.title}</p>
             <p>${product.price}</p>
-            <AddToCart id={product.id} />
+            <AddToCart product={product} />
         </div>
     );
 };
