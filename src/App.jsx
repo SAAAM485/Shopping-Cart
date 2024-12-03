@@ -34,11 +34,11 @@ function App() {
                 (item) => item.id === product.id
             );
             if (existProduct) {
-                return prevCart.map((item) => {
+                return prevCart.map((item) =>
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + 1 }
-                        : item;
-                });
+                        : item
+                );
             } else {
                 return [...prevCart, { ...product, quantity: 1 }];
             }
@@ -51,11 +51,11 @@ function App() {
             if (targetItem.quantity === 1) {
                 return prevCart.filter((item) => item.id !== product.id);
             } else {
-                return prevCart.map((item) => {
+                return prevCart.map((item) =>
                     item.id === product.id
                         ? { ...item, quantity: item.quantity - 1 }
-                        : item;
-                });
+                        : item
+                );
             }
         });
     };
@@ -103,7 +103,7 @@ function App() {
                     {!loading && !error && <Outlet context={{ products }} />}
                 </main>
                 <footer>
-                    <p>© 2024 My E-commerce Site. All rights reserved.</p>
+                    <p>© 2024 Bagel&apos;s Store. All rights reserved.</p>
                 </footer>
             </div>
         </CartContext.Provider>
