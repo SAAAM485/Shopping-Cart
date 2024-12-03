@@ -1,5 +1,9 @@
 import PropTypes from "prop-types";
-import { CartAdd, CartDecrease, CartRemove } from "./Buttons";
+import {
+    CartAdd,
+    CartDecrease,
+    CartRemove,
+} from "../../../components/Buttons/Buttons";
 
 const CartCard = ({ product }) => {
     return (

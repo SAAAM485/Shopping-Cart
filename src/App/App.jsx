@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
-import { CartContext } from "./CartContext"; // 確保路徑正確
+import { CartContext } from "../pages/Cart/CartContext/CartContext"; // 確保路徑正確
 
 function App() {
     const [products, setProducts] = useState([]);

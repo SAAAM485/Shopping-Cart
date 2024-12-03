@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
-import { CartContext } from "./CartContext"; // 確保路徑正確
+import { CartContext } from "../../pages/Cart/CartContext/CartContext"; // 確保路徑正確
 
 const AddToCart = ({ product }) => {
     const { addToCart } = useContext(CartContext);
@@ -47,8 +47,15 @@ CartRemove.propTypes = {
     product: PropTypes.object.isRequired,
 };
 
-const Checkout = () => {};
+const Checkout = () => {
+    return <button onClick={() => alert("Checkout!")}>Checkout</button>;
+};
 
-Checkout.propTypes = {};
-
-export { AddToCart, BackToProducts, CartAdd, CartDecrease, CartRemove };
+export {
+    AddToCart,
+    BackToProducts,
+    CartAdd,
+    CartDecrease,
+    CartRemove,
+    Checkout,
+};

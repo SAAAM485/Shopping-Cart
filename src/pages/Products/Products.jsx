@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Outlet, useNavigate, useOutletContext } from "react-router-dom";
-import Card from "./Card";
-import { BackToProducts } from "./Buttons";
+import Card from "../../components/Card/Card";
+import { BackToProducts } from "../../components/Buttons/Buttons";
 
 const Products = () => {
     const [showDetail, setShowDetail] = useState(false);

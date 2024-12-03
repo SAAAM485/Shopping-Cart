@@ -4,9 +4,9 @@ import {
     useNavigate,
     Outlet,
 } from "react-router-dom";
-import Card from "./Card";
+import Card from "../../components/Card/Card";
 import { useState, useEffect } from "react";
-import { BackToProducts } from "./Buttons";
+import { BackToProducts } from "../../components/Buttons/Buttons";
 
 const Categories = () => {
     const { category } = useParams();

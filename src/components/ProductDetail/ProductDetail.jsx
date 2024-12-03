@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { AddToCart } from "./Buttons";
+import { AddToCart } from "../Buttons/Buttons";
 
 function ProductDetail() {
     const location = useLocation();

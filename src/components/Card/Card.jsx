@@ -1,4 +1,4 @@
-import { AddToCart } from "./Buttons";
+import { AddToCart } from "../Buttons/Buttons";
 import PropTypes from "prop-types";
 
 const Card = ({ product, onClick }) => {
