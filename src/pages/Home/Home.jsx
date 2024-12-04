@@ -1,6 +1,8 @@
+import styles from "../pages.module.css";
+
 const Home = () => {
     return (
-        <div>
+        <div className={styles.page}>
             <h1>Welcome to Bagel&apos;s Store</h1>
             <img
                 src="../public/bagel.jpeg"

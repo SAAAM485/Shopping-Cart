@@ -1,0 +1,36 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70vw;
+    padding: 3rem 5rem;
+    background-color: white;
+}
+
+.imgContainer {
+    height: 80rem;
+    width: 80rem;
+    margin-bottom: 2rem;
+}
+
+.imgContainer img {
+    height: 80rem;
+    width: 80rem;
+    object-fit: scale-down;
+}
+
+.product h3 {
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.product p {
+    font-size: 1rem;
+    letter-spacing: 0.07rem;
+    color: #333;
+    max-width: 50vw;
+    margin-bottom: 2rem;
+}

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
-import { CartContext } from "../../pages/Cart/CartContext/CartContext"; // 確保路徑正確
+import { CartContext } from "../../pages/Cart/CartContext/CartContext";
+import "./Buttons.module.css";
 
 const AddToCart = ({ product }) => {
     const { addToCart } = useContext(CartContext);

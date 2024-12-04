@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
-import { CartContext } from "../pages/Cart/CartContext/CartContext"; // 確保路徑正確
+import { CartContext } from "../pages/Cart/CartContext/CartContext";
+import styles from "./App.module.css";
 
 function App() {
     const [products, setProducts] = useState([]);
@@ -70,14 +71,14 @@ function App() {
         <CartContext.Provider
             value={{ cart, addToCart, decreaseCart, removeFromCart }}
         >
-            <div>
+            <div className={styles.container}>
                 <header>
                     <nav>
                         <Link to="/">Home</Link>
                         <Link to="/products">Products</Link>
-                        <div className="dropdown">
+                        <div className={styles.dropdown}>
                             <span>Categories</span>
-                            <div className="dropdown-content">
+                            <div className={styles.dropdownContent}>
                                 {categories.map((category) => (
                                     <Link
                                         key={category}

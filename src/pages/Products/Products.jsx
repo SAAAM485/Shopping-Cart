@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Outlet, useNavigate, useOutletContext } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import { BackToProducts } from "../../components/Buttons/Buttons";
+import styles from "../pages.module.css";
 
 const Products = () => {
     const [showDetail, setShowDetail] = useState(false);
@@ -21,8 +22,8 @@ const Products = () => {
     if (products.length === 0) return <p>Loading...</p>;
 
     return (
-        <div>
-            <h2>Products</h2>
+        <div className={styles.page}>
+            <h1>Products</h1>
             {!showDetail ? (
                 <div>
                     {products.map((product) => (
@@ -34,7 +35,7 @@ const Products = () => {
                     ))}
                 </div>
             ) : (
-                <div>
+                <div className={styles.detail}>
                     <BackToProducts onClick={handleBackClick} />
                     <Outlet />
                 </div>

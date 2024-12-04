@@ -7,6 +7,7 @@ import {
 import Card from "../../components/Card/Card";
 import { useState, useEffect } from "react";
 import { BackToProducts } from "../../components/Buttons/Buttons";
+import styles from "../pages.module.css";
 
 const Categories = () => {
     const { category } = useParams();
@@ -36,7 +37,7 @@ const Categories = () => {
     if (products.length === 0) return <p>Loading...</p>;
 
     return (
-        <div>
+        <div className={styles.page}>
             <h1>{category}</h1>
             {!showDetail ? (
                 <div>
@@ -49,7 +50,7 @@ const Categories = () => {
                     ))}
                 </div>
             ) : (
-                <div>
+                <div className={styles.detail}>
                     <BackToProducts onClick={handleBackClick} />
                     <Outlet />
                 </div>

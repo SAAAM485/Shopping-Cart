@@ -1,0 +1,40 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 70vw;
+    background-color: white;
+    padding: 3rem 5rem;
+    border-bottom: 0.5rem solid #333;
+}
+
+.product {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.imgContainer {
+    height: 30rem;
+    width: 30rem;
+    margin-right: 8rem;
+}
+
+.product img {
+    height: 30rem;
+    width: 30rem;
+    object-fit: scale-down;
+}
+
+.product p {
+    font-size: 2rem;
+    letter-spacing: 0.06rem;
+}
+
+.product .title {
+    font-weight: 600;
+}
+
+button {
+    margin-top: 1rem;
+}
