@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import PropTypes from "prop-types";
 import { CartContext } from "../../pages/Cart/CartContext/CartContext";
-import "./Buttons.module.css";
+import styles from "./Buttons.module.css";
 
 const AddToCart = ({ product }) => {
     const { addToCart } = useContext(CartContext);
 
-    return <button onClick={() => addToCart(product)}>Add to Cart</button>;
+    return (
+        <button className={styles.button} onClick={() => addToCart(product)}>
+            Add to Cart
+        </button>
+    );
 };
 
 AddToCart.propTypes = {
@@ -14,7 +18,11 @@ AddToCart.propTypes = {
 };
 
 const BackToProducts = ({ onClick }) => {
-    return <button onClick={onClick}>Back</button>;
+    return (
+        <button className={styles.button} onClick={onClick}>
+            Back
+        </button>
+    );
 };
 
 BackToProducts.propTypes = {
@@ -23,7 +31,11 @@ BackToProducts.propTypes = {
 
 const CartAdd = ({ product }) => {
     const { addToCart } = useContext(CartContext);
-    return <button onClick={() => addToCart(product)}>+</button>;
+    return (
+        <button className={styles.button} onClick={() => addToCart(product)}>
+            +
+        </button>
+    );
 };
 
 CartAdd.propTypes = {
@@ -32,7 +44,11 @@ CartAdd.propTypes = {
 
 const CartDecrease = ({ product }) => {
     const { decreaseCart } = useContext(CartContext);
-    return <button onClick={() => decreaseCart(product)}>-</button>;
+    return (
+        <button className={styles.button} onClick={() => decreaseCart(product)}>
+            -
+        </button>
+    );
 };
 
 CartDecrease.propTypes = {
@@ -41,7 +57,14 @@ CartDecrease.propTypes = {
 
 const CartRemove = ({ product }) => {
     const { removeFromCart } = useContext(CartContext);
-    return <button onClick={() => removeFromCart(product)}>Remove</button>;
+    return (
+        <button
+            className={styles.button}
+            onClick={() => removeFromCart(product)}
+        >
+            Remove
+        </button>
+    );
 };
 
 CartRemove.propTypes = {
@@ -49,7 +72,11 @@ CartRemove.propTypes = {
 };
 
 const Checkout = () => {
-    return <button onClick={() => alert("Checkout!")}>Checkout</button>;
+    return (
+        <button className={styles.button} onClick={() => alert("Checkout!")}>
+            Checkout
+        </button>
+    );
 };
 
 export {

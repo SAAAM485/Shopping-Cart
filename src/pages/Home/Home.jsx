@@ -5,7 +5,7 @@ const Home = () => {
         <div className={styles.page}>
             <h1>Welcome to Bagel&apos;s Store</h1>
             <img
-                src="../public/bagel.jpeg"
+                src="/bagel.jpeg"
                 alt="The Store Owner, Bagel."
                 style={{
                     objectFit: "cover",

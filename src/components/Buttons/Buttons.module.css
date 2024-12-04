@@ -1,4 +1,4 @@
-button {
+.button {
     height: 4rem;
     width: 12rem;
     letter-spacing: 0.2rem;
@@ -10,18 +10,18 @@ button {
     transition: transform 0.3s ease;
 }
 
-button:hover {
+.button:hover {
     background-color: #ddd;
     color: black;
     font-weight: 800;
 }
 
-button:active {
+.button:active {
     transform: translateY(0.5rem);
 }
 
 @media (max-width: 500px) {
-    button {
+    .button {
         height: 1.5rem;
         width: 4.5rem;
         letter-spacing: 0.1rem;
@@ -30,7 +30,7 @@ button:active {
 }
 
 @media (500px < width < 1000px) {
-    button {
+    .button {
         height: 2rem;
         width: 6rem;
         letter-spacing: 0.15rem;
