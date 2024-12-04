@@ -19,3 +19,21 @@ button:hover {
 button:active {
     transform: translateY(0.5rem);
 }
+
+@media (max-width: 500px) {
+    button {
+        height: 1.5rem;
+        width: 4.5rem;
+        letter-spacing: 0.1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (500px < width < 1000px) {
+    button {
+        height: 2rem;
+        width: 6rem;
+        letter-spacing: 0.15rem;
+        font-size: 0.8rem;
+    }
+}

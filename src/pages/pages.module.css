@@ -11,6 +11,8 @@ h1 {
     font-weight: 600;
     margin: 3rem 0;
     text-transform: capitalize;
+    width: 100%;
+    text-align: center;
 }
 
 .detail button {
@@ -35,4 +37,44 @@ h1 {
     font-size: 1.6rem;
     letter-spacing: 0.2rem;
     margin-right: 5rem;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        margin: 1.5rem 0;
+    }
+
+    .detail button {
+        margin-bottom: 0.5rem;
+    }
+
+    .checkout {
+        justify-content: space-between;
+    }
+    .checkout h2 {
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@media (500px < width < 1000px) {
+    h1 {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        margin: 2rem 0;
+    }
+
+    .detail button {
+        margin-bottom: 0.5rem;
+    }
+
+    .checkout {
+        justify-content: space-between;
+    }
+    .checkout h2 {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
 }

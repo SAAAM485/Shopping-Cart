@@ -53,3 +53,90 @@
     box-sizing: border-box;
     border: #333 0.01rem solid;
 }
+
+@media (max-width: 500px) {
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        padding: 1.5rem 2.5rem;
+        border-bottom: 0.5rem solid #333;
+    }
+
+    .imgContainer {
+        height: 80px;
+        width: 80px;
+        margin-right: 0;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .product p {
+        font-size: 1.2rem;
+        letter-spacing: 0.06rem;
+    }
+
+    .mani {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .mani p {
+        height: 1.5rem;
+        width: 4.5rem;
+    }
+}
+
+@media (500px < width < 1000px) {
+    .card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70vw;
+        padding: 1.5rem 2.5rem;
+        border-bottom: 0.5rem solid #333;
+    }
+
+    .imgContainer {
+        height: 200px;
+        width: 200px;
+        margin-right: 0;
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .product p {
+        font-size: 1.2rem;
+        letter-spacing: 0.06rem;
+    }
+
+    .mani {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    .mani p {
+        height: 2rem;
+        width: 6rem;
+    }
+}

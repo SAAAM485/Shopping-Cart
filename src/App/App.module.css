@@ -75,7 +75,8 @@ nav .dropdown:hover span {
     text-transform: capitalize;
 }
 
-.dropdown:hover .dropdownContent {
+.dropdown:hover .dropdownContent,
+.dropdown:active .dropdownContent {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
@@ -109,4 +110,60 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@media (max-width: 500px) {
+    nav a,
+    nav .dropdown span {
+        letter-spacing: 0.01rem;
+        font-size: 0.8rem;
+        padding: 2rem 0;
+    }
+
+    .dropdownContent a {
+        letter-spacing: 0.01rem;
+        padding: 1.2rem 0;
+    }
+
+    main {
+        margin-top: 3rem;
+        padding: 1.5rem 3rem;
+    }
+    main img {
+        width: 300px;
+    }
+
+    footer {
+        font-size: 0.6rem;
+        letter-spacing: 0.01rem;
+        padding: 2rem 0;
+    }
+}
+
+@media (500px < width < 1000px) {
+    nav a,
+    nav .dropdown span {
+        letter-spacing: 0.01rem;
+        font-size: 0.8rem;
+        padding: 2rem 0;
+    }
+
+    .dropdownContent a {
+        letter-spacing: 0.01rem;
+        padding: 1.2rem 0;
+    }
+
+    main {
+        margin-top: 3rem;
+        padding: 1.5rem 3rem;
+    }
+    main img {
+        width: 300px;
+    }
+
+    footer {
+        font-size: 0.6rem;
+        letter-spacing: 0.01rem;
+        padding: 2rem 0;
+    }
 }

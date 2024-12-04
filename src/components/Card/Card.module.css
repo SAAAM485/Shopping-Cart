@@ -35,6 +35,74 @@
     font-weight: 600;
 }
 
-button {
+.card button {
     margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+    .card {
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgContainer {
+        height: 200px;
+        width: 200px;
+        margin: 0;
+    }
+
+    .product img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .product p {
+        font-size: 1rem;
+        letter-spacing: 0.02rem;
+    }
+
+    .card button {
+        height: 2rem;
+        width: 6rem;
+    }
+}
+
+@media (500px < width < 1200px) {
+    .card {
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgContainer {
+        height: 300px;
+        width: 300px;
+        margin: 0;
+    }
+
+    .product img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .product p {
+        font-size: 1.2rem;
+        letter-spacing: 0.02rem;
+    }
+
+    .card button {
+        height: 3rem;
+        width: 12rem;
+    }
 }
